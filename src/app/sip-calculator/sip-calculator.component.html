@@ -1,0 +1,22 @@
+<div id="container">
+<h2>SIP Calculator</h2>
+<div id="container2">
+<div class="input-fields">
+  <label>Monthly Investment (₹) </label>
+  <input type="number" [(ngModel)]="monthlyInvestment" />
+</div>
+<div class="input-fields">
+  <label>Rate of Return (% per annum) </label>
+  <input type="number" [(ngModel)]="rateOfReturn" />
+</div>
+<div class="input-fields">
+  <label>Tenure (years) </label>
+  <input type="number" [(ngModel)]="tenure" />
+</div>
+<button (click)="calculateSIP()" class="calculateButton">Calculate</button>
+
+<div *ngIf="totalValue">
+  <h3>Total Value after {{ tenure }} years: ₹{{ totalValue | number:'1.2-2' }}</h3>
+</div>
+</div>
+</div>
